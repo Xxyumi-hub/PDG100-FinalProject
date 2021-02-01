@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Welcome to Uiryeong</title>
+        <meta charset='UTF-8'/>
+        <meta name="description" content="A simple HTML, CSS, JS page showing the small town of Uiryeong, South Korea">
+        <style>
+            body {
+                background-image: url("https://wallpaperaccess.com/full/37284.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+                font-weight: bold;
+                text-shadow:
+                -.5px -.5px 0 #000,
+                .5px -.5px 0 #000,
+                -.5px .5px 0 #000,
+                .5px .5px 0 #000; 
+            }
+            h1 {
+                text-align: center;
+            }
+            img[src] {
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                width: 50%;
+                border-radius: 20%;
+            }
+            table, tr, td, caption {
+                margin: 0 auto;
+                padding: 1%;
+                font-size: 1.1em;
+                }
+            caption {
+                font-size: 1.8em;
+            }
+            p {
+                text-align: center;
+                font-size: 1.2em;
+            }
+            ol, ul {
+                text-align: center;
+                list-style-position: inside;
+            }
+            
+            .form {
+                display: block;
+                text-align: center;
+            }
+            input[type=submit] {
+                margin: 1%;
+                border: none;
+                border-radius: 15px;
+                padding: 1%;
+                background-color: rgb(174, 232, 250);
+                opacity: 0.9;
+            }
+          
+            input[type=submit]:hover {
+                background-color: rgb(174, 232, 250);
+                opacity: 0.5;
+            }
+     
+            .email-link {
+                color: rgb(174, 232, 250);
+            }
+            .email-link:hover {
+                font-size: 1.2em;
+            }
+        </style>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to Uiryeong, South Korea!</h1>
+        <a href="https://en.wikipedia.org/wiki/Uiryeong_County">
+            <img src="https://www.history.com/.image/t_share/MTU4MDk5NzQyMjUxODIwODI1/south-korea.jpg" alt="A picture of a traditional korean building">
+        </a>
+        <table>
+            <caption>Hotspots in Uiryeong</caption>
+            <tr>
+                <td>Uibyong Museum</td>
+                <td>Chungik Shrine</td>
+                <td>Mom's touch</td>
+            </tr>
+            <tr>
+                <td>Ga-rye Elementary School</td>
+                <td>Uiryeong all girls middle school</td>
+                <td>Uiryeong all boys high school</td>
+            </tr>
+            <tr>
+                <td>PC Room</td>
+                <td>Karaoke room</td>
+                <td>Uiryeong traditional market</td>
+            </tr>
+        </table>
+        <p>If I had to rate the above places to see in order it would go:</p>
+        <ol>
+            <li>Uibyong Museum</li>
+            <li>Chungik Shrine</li>
+            <li>Uiryeong traditional market</li>
+            <li>PC Room</li>
+            <li>Karaoke room</li>
+            <li>Schools:
+                <ul>
+                    <li>Uiryeong all boys high school</li>
+                    <li>Uiryeong all girls middle school</li>
+                    <li>Ga-rye Elementary School</li>
+                </ul>
+            </li>
+        </ol>
+        <p>I'd love to know who you are! Please enter the below:</p>
+        <div class="form">
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" required> <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>  
+        <footer><p>You can reach me <a class="email-link" href="mailto:jwilkes1@student.egcc.edu">here!</a></p></footer>
+    </body>
+</html>
